@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:56:33 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 17:34:33 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 19:29:22 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,21 @@
 # include <sstream>
 
 class PhoneBook{
-	private:
+private:
 	// private data members
 	static const int MAX_CONTACTS = 8;
 	int indexContact;
 	int totalContacts;
 	Contact contacts[MAX_CONTACTS];
 
-	public:
+public:
 	// public member functions
-		// this is the constructor
-		PhoneBook();
-		// this is the deconstructor
-		~PhoneBook();
-		void	addContact(void);
-		void	searchContact();
-
+	// this is the constructor
+	PhoneBook();
+	// this is the deconstructor
+	~PhoneBook();
+	void	addContact(void);
+	void	searchContact();
 };
 
 #endif

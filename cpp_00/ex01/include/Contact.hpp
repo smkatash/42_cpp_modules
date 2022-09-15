@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:55:44 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 18:30:09 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 19:29:00 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,22 +18,21 @@
 
 // class definition
 class Contact {
-	private:
+private:
 	// private data members
-		static const int FIELDS_ARG = 5;
-		int index;
-		std::string fieldInfo[FIELDS_ARG];
+	static const int FIELDS_ARG = 5;
+	int index;
+	std::string fieldInfo[FIELDS_ARG];
 
-	public:
+public:
 	// public member functions
-		// this is the constructor
-		Contact();
-		// this is the deconstructor
-		~Contact();
-		int getData(int index);
-		void displayRows();
-		void displayTable();
-
+	// this is the constructor
+	Contact();
+	// this is the deconstructor
+	~Contact();
+	int getData(int index);
+	void displayRows();
+	void displayTable();
 };
 
 #endif
