@@ -6,15 +6,18 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:25:46 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/14 17:59:01 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 14:47:40 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Contact.hpp"
 
+// member functions definitions including constr. and destr.
 Contact::Contact() {}
 Contact::~Contact() {}
 
+// namespaces are used to organize code into logical groups and to prevent name 
+// collisions. checkIsalnum iterates along the string to check if char is alphanumeric // and returns true, and false otherwise.
 namespace {
 	bool checkIsalnum(const std::string &str){
 		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++){
@@ -25,6 +28,11 @@ namespace {
 	}
 }
 
+// saves input data according to title into the fieldInfo by getting line by line
+// from user input. std::cin.eof() returns true if an attempt has been made to read 
+// past the end of file. and std::cin.clear() clears the error flag on cin and returns 0 as a failure.
+// If input has been saved correctly into fieldInfo, return 0 for successful.
+// Input is checked with checkIsalnum if it is an alphanumeric value.
 int	Contact::getData(int index){
 	int	i;
 
@@ -34,31 +42,33 @@ int	Contact::getData(int index){
 	do {
 		std::cout << "First Name: ";
 		std::getline(std::cin, this->fieldInfo[i]);
-		if (std::cin.eof()) { std::cin.clear(); return 1;}
+		if (std::cin.eof()) { std::cin.clear(); return 0;}
 	}	while (!checkIsalnum(this->fieldInfo[i]) || this->fieldInfo[i].empty());
 
 	std::cout << "Last name: ";
 	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 1;}
+	if (std::cin.eof()) { std::cin.clear(); return 0;}
 
 	std::cout << "Nickname: ";
 	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 1;}
+	if (std::cin.eof()) { std::cin.clear(); return 0;}
 
 	std::cout << "Phone number: ";
 	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 1;}
+	if (std::cin.eof()) { std::cin.clear(); return 0;}
 	
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 1;}
+	if (std::cin.eof()) { std::cin.clear(); return 0;}
 
 	if (this->fieldInfo[0].length() < 1){
-		std::cout << "\n Name is required\n"; return 1;
+		std::cout << "\n Name is required\n"; return 0;
 	}
-	return 0;
+	return 1;
 }
 
+// loops of fieldInfo string array and outputs its' strings with a newline
+// row by row
 void	Contact::displayRows(){
 	int	i;
 
@@ -71,6 +81,14 @@ void	Contact::displayRows(){
 	std::cout << "Darkest secret: " << this->fieldInfo[++i] << std::endl;
 }
 
+
+// displays Contact details in a Table format, according to fieldInfo array of strings
+// by placing | between outputs. 
+// Verifies if length of a string is more than 10 it replaces rest with ".", else
+// outputs a full string.
+// - std::setw() from <iomanip> sets the field width to be used on output operations
+// - std::right is a stream manipulator to let the minus and the digits of a negative 
+// number both be put at the right of the padding width.
 void	Contact::displayTable(){
 	std::cout << "|" << std::right << std::setw(10) << this->index;
 

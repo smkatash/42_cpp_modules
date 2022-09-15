@@ -6,12 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:47:15 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/14 13:29:03 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 11:51:50 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
+// Loops over string and returns it's length
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -20,6 +21,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
+// Loops over string and if lower case char, bitwise changes to uppercase char
 std::string	megaphone(std::string str)
 {
 	for (int i = 0; str[i]; i++)
@@ -28,6 +30,8 @@ std::string	megaphone(std::string str)
 	return str;
 }
 
+// If argument count is less than 1, throws an error output. Else, loops over argument vectors 
+// and outputs the string changed from lowercase to uppercase by megaphone function
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
