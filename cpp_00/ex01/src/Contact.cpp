@@ -6,18 +6,18 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:25:46 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 14:47:40 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 18:19:09 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Contact.hpp"
 
-// member functions definitions including constr. and destr.
+// constr. and destr.
 Contact::Contact() {}
 Contact::~Contact() {}
 
 // namespaces are used to organize code into logical groups and to prevent name 
-// collisions. checkIsalnum iterates along the string to check if char is alphanumeric // and returns true, and false otherwise.
+// collisions. checkIsalnum iterates along the string to check if char is alphanumeric and returns true, false otherwise.
 namespace {
 	bool checkIsalnum(const std::string &str){
 		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++){
@@ -27,12 +27,24 @@ namespace {
 		return false;
 	}
 }
+// namespaces are used to organize code into logical groups and to prevent name 
+// collisions. checkIsdigit iterates along the string to check if char is numeric and returns true, false otherwise.
+namespace {
+	bool checkIsdigit(const std::string &str){
+		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++){
+			if (std::isdigit(*ptr))
+			return true;
+		}
+		return false;
+	}
+}
 
-// saves input data according to title into the fieldInfo by getting line by line
+// saves input data according to the title into the fieldInfo by getting line by line
 // from user input. std::cin.eof() returns true if an attempt has been made to read 
 // past the end of file. and std::cin.clear() clears the error flag on cin and returns 0 as a failure.
-// If input has been saved correctly into fieldInfo, return 0 for successful.
-// Input is checked with checkIsalnum if it is an alphanumeric value.
+// If input has been saved correctly into fieldInfo, 1 is returned for successful.
+// Input is checked with checkIsalnum if it is an alphanumeric value and CheckIsdigit,
+// reprompts user in case of a wrong input type.
 int	Contact::getData(int index){
 	int	i;
 
@@ -44,22 +56,30 @@ int	Contact::getData(int index){
 		std::getline(std::cin, this->fieldInfo[i]);
 		if (std::cin.eof()) { std::cin.clear(); return 0;}
 	}	while (!checkIsalnum(this->fieldInfo[i]) || this->fieldInfo[i].empty());
-
-	std::cout << "Last name: ";
-	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 0;}
-
-	std::cout << "Nickname: ";
-	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 0;}
-
-	std::cout << "Phone number: ";
-	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 0;}
-	
-	std::cout << "Darkest Secret: ";
-	std::getline(std::cin, this->fieldInfo[++i]);
-	if (std::cin.eof()) { std::cin.clear(); return 0;}
+	i++;
+	do {
+		std::cout << "Last name: ";
+		std::getline(std::cin, this->fieldInfo[i]);
+		if (std::cin.eof()) { std::cin.clear(); return 0;}
+	}	while (!checkIsalnum(this->fieldInfo[i]) || this->fieldInfo[i].empty());
+	i++;
+	do {
+		std::cout << "Nickname: ";
+		std::getline(std::cin, this->fieldInfo[i]);
+		if (std::cin.eof()) { std::cin.clear(); return 0;}
+	}	while (!checkIsalnum(this->fieldInfo[i]) || this->fieldInfo[i].empty());
+	i++;
+	do {
+		std::cout << "Phone number: ";
+		std::getline(std::cin, this->fieldInfo[i]);
+		if (std::cin.eof()) { std::cin.clear(); return 0;}
+	}	while (!checkIsdigit(this->fieldInfo[i]) || this->fieldInfo[i].empty());
+	i++;
+	do {
+		std::cout << "Darkest Secret: ";
+		std::getline(std::cin, this->fieldInfo[i]);
+		if (std::cin.eof()) { std::cin.clear(); return 0;}
+	}	while (!checkIsalnum(this->fieldInfo[i]) || this->fieldInfo[i].empty());
 
 	if (this->fieldInfo[0].length() < 1){
 		std::cout << "\n Name is required\n"; return 0;
@@ -67,7 +87,7 @@ int	Contact::getData(int index){
 	return 1;
 }
 
-// loops of fieldInfo string array and outputs its' strings with a newline
+// loops over fieldInfo string array and outputs it's strings with a newline
 // row by row
 void	Contact::displayRows(){
 	int	i;
@@ -83,8 +103,8 @@ void	Contact::displayRows(){
 
 
 // displays Contact details in a Table format, according to fieldInfo array of strings
-// by placing | between outputs. 
-// Verifies if length of a string is more than 10 it replaces rest with ".", else
+// by placing '|' between outputs. 
+// Verifies if length of a string is more than 10 it replaces rest with '.', else
 // outputs a full string.
 // - std::setw() from <iomanip> sets the field width to be used on output operations
 // - std::right is a stream manipulator to let the minus and the digits of a negative 

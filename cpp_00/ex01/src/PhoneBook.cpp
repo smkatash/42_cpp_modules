@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:09:28 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 14:56:18 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 18:18:48 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,37 +16,28 @@
 PhoneBook::PhoneBook(){
 	this->indexContact = 0;
 	this->totalContacts = 0;
-	// dynamcally allocate memory for Contact objects and store them in the array
-	for (int i = 0; i < MAX_CONTACTS; i++) {
-		this->contacts[i] = new Contact;
-	}
+	Contact contacts[MAX_CONTACTS];
 }
 
-// destruction of malloced Contact class array
-PhoneBook::~PhoneBook(){
-	for (int i = 0; i < MAX_CONTACTS; i++) {
-		delete this->contacts[i];
-	}
-}
-// creates a pointer to an object Contact
+// destruction of Phonebook
+PhoneBook::~PhoneBook(){}
+
+// saves input data into newContact object by calling its member function.
 void PhoneBook::addContact(){
 	if (this->indexContact >= this->MAX_CONTACTS) 
 		this->indexContact = 0;
 
 	std::cout << std::endl;
-	// dynamic memory allocation with 'new'
-	// if getData returns 0 it frees the allocated object
-	Contact *newContact = new Contact;
-	if (newContact->getData(this->indexContact + 1))
+	Contact	newContact;
+	if (newContact.getData(this->indexContact + 1))
 	{
-		delete this->contacts[this->indexContact];
 		this->contacts[this->indexContact] = newContact;
 		std::cout << "\nNew contact added\n";
 		this->indexContact++;
 		if (this->totalContacts < 8)
 			this->totalContacts++;
 	} else {
-		delete newContact;
+		std::cout << "\nFailed to add the contact\n";
 	}
 	std::cout << std::endl;
 	return ;
@@ -80,11 +71,11 @@ void	PhoneBook::searchContact(){
 	}
 
 	std::cout << "\n"
-	<< "|----------------------------------------------|\n"
-	<< "|  Index   | First Name | Last Name | Nickname |\n"
-	<< "|----------------------------------------------|\n";
+	<< "|--------------------------------------------|\n"
+	<< "|  Index | First Name | Last Name | Nickname |\n"
+	<< "|--------------------------------------------|\n";
 	for (int i = 0; i < this->totalContacts; i++)
-		this->contacts[i]->displayTable();
+		this->contacts[i].displayTable();
 	std::cout << "|-------------------------------------------|" << std::endl;
 
 	int i;
@@ -109,6 +100,6 @@ void	PhoneBook::searchContact(){
 	} while (true);
 
 	std::cout << std::endl;
-	this->contacts[i - 1]->displayRows();
+	this->contacts[i - 1].displayRows();
 	std::cout << std::endl;
 }
