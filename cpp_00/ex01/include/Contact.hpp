@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:55:44 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 14:03:54 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/15 18:30:09 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,6 @@ class Contact {
 	private:
 	// private data members
 		static const int FIELDS_ARG = 5;
-		enum fields {
-			firstName,
-			lastName,
-			nickName,
-			phoneNumber,
-			darkestSecret
-		};
 		int index;
 		std::string fieldInfo[FIELDS_ARG];
 
