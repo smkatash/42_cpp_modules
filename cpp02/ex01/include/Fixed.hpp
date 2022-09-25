@@ -6,13 +6,14 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:43:14 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/24 20:17:16 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/26 01:21:13 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
+# include <cmath>
 
 class Fixed {
 	private:
