@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 21:05:02 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/09/28 12:09:19 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main()
 	AAnimal* CatsAndDogs[10];
 	//AAnimal Animal(); -> this will give an error because it is not instantiable Abstract Class
 
-	atexit(&checkLeaks);
+	//atexit(&checkLeaks);
 	for (int i = 0; i < 10; i++)
 	{
 		if (i >= 5)
