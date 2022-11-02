@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 07:22:40 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/22 07:57:49 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/02 23:52:46 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 #include <string>
 #include <fstream>
 
+// .good(): check if this stream has raised any error or not.
+//.peek(): retrieves the next character from the stream without actually consuming it,"previewing"
+//.eof(): is used to check if the stream is has raised any EOF
+// write: inserts the first n characters of the array pointed by s into the stream.
+// std::string:: data() returns an array that is owned by the string.
+// std::string::npos "until the end of the string".
 void	replace(std::string filename, std::string s1, std::string s2)
 {
 	std::ifstream read_in(filename);

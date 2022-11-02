@@ -6,14 +6,15 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:22:07 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/20 13:44:54 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/02 22:57:15 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Zombie.hpp"
+#include "Zombie.hpp"
 
 Zombie::Zombie(std::string name) {
 	this->_name = name;
+	std::cout << this->_name << " is constructed." << std::endl;
 }
 
 Zombie::~Zombie() {

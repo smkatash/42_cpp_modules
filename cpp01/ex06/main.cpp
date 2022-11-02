@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:23:14 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/23 10:40:39 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/03 00:04:16 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Harl.hpp"
+#include "Harl.hpp"
 
 int main(int argc, char **argv)
 {
@@ -50,5 +50,7 @@ int main(int argc, char **argv)
 				std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 		}
 	}
+	else
+		std::cout << "No input" << std::endl;
 	return (0);
 }

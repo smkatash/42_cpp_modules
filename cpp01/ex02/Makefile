@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/21 15:46:29 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/02 23:22:15 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,23 +19,25 @@ NAME	=	brain
 SRC		=	main.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
 
+.SILENT:
+
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	@$(CC) $(CFLAGS) -o $@ $^ 
+	$(CC) $(CFLAGS) -o $@ $^ 
 	@echo "brain is complied"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 obj :
-	@mkdir obj
+	mkdir obj
 
 clean :
-	@rm -rf obj
+	rm -rf obj
 
 fclean : clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re : clean all
 

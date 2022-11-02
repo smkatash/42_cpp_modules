@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:37:52 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/22 17:25:25 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/03 00:00:30 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Harl {
 		void _error(void);
 
 	public:
-		Harl();
-		~Harl();
+		Harl(void);
+		~Harl(void);
 		void complain(std::string level);
 };
 

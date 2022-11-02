@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 13:22:17 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/20 14:17:01 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/02 23:41:11 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Zombie.hpp"
+#include "Zombie.hpp"
 
 int main(void)
 {

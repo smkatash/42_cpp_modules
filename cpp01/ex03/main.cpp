@@ -6,15 +6,14 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:23:14 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/21 23:43:49 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/02 23:38:32 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/HumanA.hpp"
-#include "include/HumanB.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main()
-{
+int main(void) {
 	{
 		Weapon club = Weapon("crude spiked club");
 		HumanA bob("Bob", club);
