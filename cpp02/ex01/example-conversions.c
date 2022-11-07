@@ -11,12 +11,15 @@ int	main(void)
 	int	fixedPoint_float;
 	double	fixedPoint_float_dbl;
 
+	// 50: 110010 | 12800: 11001000000000
 	printf("\n--------------\n");
 	fixedPoint = num << 8;
 	printf("from num: %d to fixed Point: %d\n", num, fixedPoint);
 	num1 = fixedPoint >> 8;
 	printf("num back: %d from fixed Point: %d\n", num1, fixedPoint);
 	printf("\n--------------\n");
+	// 42.562: 010000100 | 01010100011111101111101
+	// 10896:  10101010010000
 	fixedPoint_float = round(float_num * (1 << 8));
 	printf("from float: %f to fixed Point: %d\n", float_num, fixedPoint_float);
 	fixedPoint_float_dbl = fixedPoint_float;

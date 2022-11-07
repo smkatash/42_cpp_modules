@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:43:11 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/26 01:21:56 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/07 21:55:42 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Fixed.hpp"
+#include "Fixed.hpp"
 
 Fixed::Fixed(void) : _fixedValue(0) {
 	std::cout << "Default constructor called" << std::endl;

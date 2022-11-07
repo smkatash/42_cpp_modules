@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:43:11 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/26 11:17:45 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/07 22:19:02 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Fixed.hpp"
+#include "Fixed.hpp"
 
 Fixed::Fixed(void) : _fixedValue(0) {}
 

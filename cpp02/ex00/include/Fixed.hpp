@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 17:43:14 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/24 19:35:28 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/07 21:25:05 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,16 @@ class Fixed {
 		int					_fixedValue;
 		static const int	_fractionBits = 8;
 
+	// constructor & destructor
+	// copy constructor
+	// copy assignment operator overload.
 	public:
-		Fixed();
+		Fixed(void);
+		~Fixed(void);
 		Fixed(const Fixed& Parent);
 		Fixed& operator=(const Fixed& cpyParent);
-		~Fixed();
-		int	getRawBits( void ) const;
-		void	setRawBits( int const raw );
+		int		getRawBits(void) const;
+		void	setRawBits(int const raw);
 };
 
 #endif

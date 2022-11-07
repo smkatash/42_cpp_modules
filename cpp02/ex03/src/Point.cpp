@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 13:57:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/26 14:02:19 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/07 22:31:24 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Point.hpp"
+#include "Point.hpp"
 
 Point::Point(void) : _x(Fixed(0)), _y(Fixed(0)) {}
 
