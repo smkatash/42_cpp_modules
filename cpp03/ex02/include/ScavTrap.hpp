@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 00:49:00 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 00:57:39 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:03:23 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 class ScavTrap : public ClapTrap
 {
 	public:
-		ScavTrap();
+		ScavTrap(void);
 		ScavTrap(std::string name);
 		ScavTrap(const ScavTrap& Parent);
-		ScavTrap& operator=(const ScavTrap& cpyParent);
-		~ScavTrap();
-		void attack(std::string const & target);
-		void guardGate();
+		ScavTrap& operator=(const ScavTrap &cpyParent);
+		~ScavTrap(void);
+		void attack(std::string const &target);
+		void guardGate(void);
 };
 
 #endif

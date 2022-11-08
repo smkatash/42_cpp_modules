@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 00:54:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 00:58:01 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:05:51 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ScavTrap.hpp"
+#include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap(void)
 	: ClapTrap() {
 	std::cout << "ScavTrap constructor called" << std::endl;
 	this->_hitPoints = 100;
@@ -39,7 +39,7 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& cpyParent)
 	return *this;
 }
 
-ScavTrap::~ScavTrap()
+ScavTrap::~ScavTrap(void)
 {
 	std::cout << "ScavTrap destructor called for " << this->_name << std::endl;
 }

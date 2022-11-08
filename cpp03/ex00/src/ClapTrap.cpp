@@ -6,24 +6,24 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:45:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 00:43:53 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/08 23:43:58 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() 
+ClapTrap::ClapTrap(void) 
 	: _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 		std::cout << "default ClapTrap is constructed" << std::endl;
 	}
 
-ClapTrap::~ClapTrap() {
+ClapTrap::~ClapTrap(void) {
 	std::cout << this->_name << " is destroyed" << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name)
 	: _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
-	std::cout << name << " is constructed" << std::endl;
+	std::cout << this->_name << " is constructed" << std::endl;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
@@ -47,7 +47,7 @@ void ClapTrap::beRepaired(unsigned int amount) {
 	std::cout << this->_name << " is healed by " << amount << " hit points, now has " << this->_hitPoints << " hit points." << std::endl;
 }
 
-void ClapTrap::attack(std::string const & target)
+void ClapTrap::attack(std::string const &target)
 {
 	std::cout << this->_name;
 	if (this->_energyPoints > 0)
@@ -65,7 +65,7 @@ ClapTrap::ClapTrap(const ClapTrap& enemy)
 	std::cout << "Copy constructor is called on " << enemy._name << std::endl;
 }
 
-ClapTrap& ClapTrap::operator=(const ClapTrap& enemy)
+ClapTrap& ClapTrap::operator=(const ClapTrap &enemy)
 {
 	this->_name = enemy._name;
 	this->_hitPoints = enemy._hitPoints;

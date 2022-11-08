@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 00:44:51 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/08 23:49:02 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
-int main()
+int main(void)
 {
 	ClapTrap harry("Harry");
 	ClapTrap hermione("Hermione");
@@ -32,4 +32,5 @@ int main()
 	ron.beRepaired(10);
 	ron.attack("Malfoy");
 	ron.takeDamage(19);
+	return 0;
 }

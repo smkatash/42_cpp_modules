@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 09:08:26 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 09:24:31 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:13:38 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/DiamondTrap.hpp"
+#include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap()
+DiamondTrap::DiamondTrap(void)
 	: ClapTrap("default ClapTrap name"), ScavTrap(), FragTrap(), _name("default")
 {
 	std::cout << "DiamondTrap constructor called" << std::endl;
@@ -22,9 +22,9 @@ DiamondTrap::DiamondTrap()
 }
 
 DiamondTrap::DiamondTrap(std::string name)
-	: ClapTrap(name + "_ClapTrap name"), ScavTrap(), FragTrap(), _name(name)
+	: ClapTrap(name + "_ClapTrap"), ScavTrap(), FragTrap(), _name(name)
 {
-	std::cout << "DiamondTrap " << name << " constructor called" << std::endl;
+	std::cout << "DiamondTrap " << this->_name << " constructor called" << std::endl;
 	this->FragTrap::_hitPoints = 100;
 	this->ScavTrap::_energyPoints = 50;
 	this->FragTrap::_attackDamage = 30;
@@ -44,7 +44,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& cpyParent)
 	return *this;
 }
 
-DiamondTrap::~DiamondTrap()
+DiamondTrap::~DiamondTrap(void)
 {
 	std::cout << "DiamondTrap destructor called for " << this->_name << std::endl;
 }

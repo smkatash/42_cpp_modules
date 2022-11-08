@@ -6,18 +6,18 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:45:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 08:43:12 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:05:57 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ClapTrap.hpp"
+#include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap() 
+ClapTrap::ClapTrap(void) 
 	: _name("ClapTrap"), _hitPoints(10), _energyPoints(10), _attackDamage(0) {
 		std::cout << "default ClapTrap is constructed" << std::endl;
 }
 
-ClapTrap::~ClapTrap() {
+ClapTrap::~ClapTrap(void) {
 	std::cout << this->_name << " is destroyed" << std::endl;
 }
 

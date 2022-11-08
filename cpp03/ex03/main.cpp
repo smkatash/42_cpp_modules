@@ -6,15 +6,15 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 09:15:38 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:10:13 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ScavTrap.hpp"
-#include "include/FragTrap.hpp"
-#include "include/DiamondTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
-int main()
+int main(void)
 {
 	ClapTrap	harry("Harry");
 	ClapTrap	hermione("Hermione");
@@ -45,4 +45,5 @@ int main()
 	luna.guardGate();
 	luna.highFivesGuys();
 	luna.whoAmI();
+	return 0;
 }

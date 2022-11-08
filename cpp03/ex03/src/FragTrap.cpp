@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 08:38:07 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 08:47:57 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:09:43 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/FragTrap.hpp"
+#include "FragTrap.hpp"
 
-FragTrap::FragTrap()
+FragTrap::FragTrap(void)
 	: ClapTrap() {
 	std::cout << "FragTrap constructor called" << std::endl;
 	this->_hitPoints = 100;
@@ -39,7 +39,7 @@ FragTrap& FragTrap::operator=(const FragTrap& cpyParent)
 	return *this;
 }
 
-FragTrap::~FragTrap()
+FragTrap::~FragTrap(void)
 {
 	std::cout << "FragTrap destructor called for " << this->_name << std::endl;
 }

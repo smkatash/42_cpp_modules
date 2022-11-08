@@ -6,14 +6,14 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 08:51:06 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:06:33 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ScavTrap.hpp"
-#include "include/FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int main()
+int main(void)
 {
 	ClapTrap harry("Harry");
 	ClapTrap hermione("Hermione");
@@ -37,4 +37,5 @@ int main()
 	snape.takeDamage(99);
 	snape.beRepaired(50);
 	snape.highFivesGuys();
+	return 0;
 }

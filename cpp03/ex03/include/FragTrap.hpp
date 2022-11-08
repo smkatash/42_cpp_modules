@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 08:38:27 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 09:20:35 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 00:16:35 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class FragTrap : virtual public ClapTrap
 {
 	public:
-		FragTrap();
+		FragTrap(void);
 		FragTrap(std::string name);
 		FragTrap(const FragTrap& Parent);
 		FragTrap& operator=(const FragTrap& cpyParent);
