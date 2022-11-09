@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 11:19:24 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 14:42:20 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:23:34 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ICharacter.hpp"
-#include "../include/Character.hpp"
-#include "../include/AMateria.hpp"
+#include "ICharacter.hpp"
+#include "Character.hpp"
+#include "AMateria.hpp"
 
 Character::Character(const std::string& name) : _name(name) {
 	for (int i = 0; i < 4; i++) {

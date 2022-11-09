@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/28 11:52:55 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/09 21:13:13 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,15 +18,16 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	Interfaces
 SRC		=	main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "Interfaces is complied"
+	@echo "Interfaces is compiled"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

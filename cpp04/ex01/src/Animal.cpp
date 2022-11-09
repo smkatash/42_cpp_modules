@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:45:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 16:42:16 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:39:47 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Animal.hpp"
+#include "Animal.hpp"
 
 Animal::Animal() : _type("Animal") {
 	std::cout << "default Animal is constructed" << std::endl;

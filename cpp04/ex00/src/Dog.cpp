@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:29:40 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 16:42:08 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:35:53 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Dog.hpp"
+#include "Dog.hpp"
 
 Dog::Dog() : Animal("Dog") {
 	std::cout << "Animal is constructed" << std::endl;

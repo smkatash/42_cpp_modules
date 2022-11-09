@@ -6,13 +6,12 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 18:36:11 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:00:30 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Dog.hpp"
-#include "include/Cat.hpp"
-// #include <stdlib.h>
+#include "Dog.hpp"
+#include "Cat.hpp"
 #include <iomanip>
 
 // To check leaks:
@@ -21,17 +20,17 @@
 // 	system("leaks Brains");
 // }
 
-int main()
+int main(void)
 {
 	Animal* CatsAndDogs[10];
 
-	// atexit(&checkLeaks);
+	//atexit(&checkLeaks);
 	for (int i = 0; i < 10; i++)
 	{
-		if (i >= 5)
-			CatsAndDogs[i] = new Dog();
-		else
+		if (i < 5)
 			CatsAndDogs[i] = new Cat();
+		else
+			CatsAndDogs[i] = new Dog();
 	}
 	std::cout << std::endl;
 	Cat copyCat(*(Cat *)CatsAndDogs[0]);
@@ -59,4 +58,5 @@ int main()
 	{
 		delete CatsAndDogs[i];
 	}
+	return 0;
 }

@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 23:11:30 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 15:53:31 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:23:38 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/AMateria.hpp"
+#include "AMateria.hpp"
 
 AMateria::AMateria(std::string const & type) : _type(type) {
 }

@@ -6,16 +6,15 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 11:49:38 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 15:54:07 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:23:13 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/IMateriaSource.hpp"
-#include "include/MateriaSource.hpp"
-#include "include/Ice.hpp"
-#include "include/Cure.hpp"
-#include "include/Character.hpp"
-// #include <stdlib.h>
+#include "IMateriaSource.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
+#include "Character.hpp"
 
 int	main(void)
 {

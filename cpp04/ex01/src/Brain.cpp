@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:04:17 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 18:05:10 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:49:04 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Brain.hpp"
+#include "Brain.hpp"
 
 Brain::Brain()
 {
@@ -33,14 +33,14 @@ Brain::Brain()
 	std::cout << "Brain constructor called" << std::endl;
 }
 
-Brain::Brain(const Brain& Parent)
+Brain::Brain(const Brain &Parent)
 {
 	for (int i = 0; i < 100; i++)
 		this->_ideas[i] = Parent._ideas[i];
 	std::cout << "Brain copy constructor is called" << std::endl;
 }
 
-Brain& Brain::operator=(const Brain& cpyParent)
+Brain& Brain::operator=(const Brain &cpyParent)
 {
 	if (this != &cpyParent)
 	{

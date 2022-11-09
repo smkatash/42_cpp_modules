@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 17:04:17 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 18:05:10 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:04:11 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Brain.hpp"
+#include "Brain.hpp"
 
 Brain::Brain()
 {

@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 11:42:22 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 15:00:59 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:15:22 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ class MateriaSource : public IMateriaSource
 	private:
 		AMateria* _materia[4];
 	public:
-		MateriaSource();
-		MateriaSource(const MateriaSource& Parent);
-		MateriaSource& operator=(const MateriaSource& cpyParent);
-		~MateriaSource();
+		MateriaSource(void);
+		MateriaSource(const MateriaSource &Parent);
+		MateriaSource& operator=(const MateriaSource &cpyParent);
+		~MateriaSource(void);
 		void learnMateria(AMateria* type);
-		AMateria* createMateria(const std::string& type);
+		AMateria* createMateria(const std::string &type);
 };
 
 

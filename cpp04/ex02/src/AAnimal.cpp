@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 21:45:05 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 20:58:33 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:04:05 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/AAnimal.hpp"
+#include "AAnimal.hpp"
 
 AAnimal::AAnimal() : _type("AAnimal") {
 	std::cout << "default AAnimal is constructed" << std::endl;

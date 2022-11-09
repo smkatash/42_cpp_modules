@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/27 16:03:43 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/09 20:36:53 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,15 +18,16 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	Animal
 SRC		=	main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "Animal is complied"
+	@echo "Animal is compiled"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

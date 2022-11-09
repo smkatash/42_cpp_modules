@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 10:51:25 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 11:59:40 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:14:51 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 class Ice: public AMateria {
 	public:
-		Ice();
-		Ice(const Ice& Parent);
-		Ice& operator=(const Ice& cpyParent);
-		~Ice();
-		void use(ICharacter& target);
-		AMateria* clone() const;
+		Ice(void);
+		Ice(const Ice &Parent);
+		Ice& operator=(const Ice &cpyParent);
+		~Ice(void);
+		void use(ICharacter &target);
+		AMateria* clone(void) const;
 };
 
 #endif

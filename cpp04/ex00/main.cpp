@@ -6,13 +6,13 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 23:26:34 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 16:58:11 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:42:29 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Dog.hpp"
-#include "include/Cat.hpp"
-#include "include/WrongCat.hpp"
+#include "Dog.hpp"
+#include "Cat.hpp"
+#include "WrongCat.hpp"
 
 int main(void)
 {
@@ -40,6 +40,5 @@ int main(void)
 	delete retriever;
 	delete defaultWrongAnimal;
 	delete bunny;
-	//system("leaks Animal");
 	return (0);
 }

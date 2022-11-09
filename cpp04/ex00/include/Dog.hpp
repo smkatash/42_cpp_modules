@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:13:11 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 15:48:30 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:34:51 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@
 
 class Dog: public Animal {
 	public:
-		Dog();
+		Dog(void);
 		Dog(std::string type);
-		Dog(const Dog& Parent);
-		Dog& operator=(const Dog& cpyParent);
-		~Dog();
-		void makeSound() const;
+		Dog(const Dog &Parent);
+		Dog &operator=(const Dog &cpyParent);
+		~Dog(void);
+		void makeSound(void) const;
 };
 
 #endif

@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/27 21:01:20 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/09 21:01:49 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,15 +18,16 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	Brains
 SRC		=	main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "Brain is complied"
+	@echo "Brain is compiled"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

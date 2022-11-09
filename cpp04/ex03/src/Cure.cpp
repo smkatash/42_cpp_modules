@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 11:12:27 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/28 15:50:56 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 21:23:27 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cure.hpp"
+#include "Cure.hpp"
 
 Cure::Cure() : AMateria("cure") {
 }

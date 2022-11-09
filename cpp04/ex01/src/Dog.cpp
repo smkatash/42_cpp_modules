@@ -6,14 +6,14 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:29:40 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 18:16:22 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:58:00 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Dog.hpp"
+#include "Dog.hpp"
 
 Dog::Dog() : Animal("Dog"), _brain(new Brain()){
-	std::cout << "Animal is constructed" << std::endl;
+	std::cout << "Dog is constructed" << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type), _brain(new Brain()){

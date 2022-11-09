@@ -6,14 +6,14 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:48:14 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/27 18:16:06 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/09 20:58:05 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Cat.hpp"
+#include "Cat.hpp"
 
 Cat::Cat() : Animal("Cat"), _brain(new Brain()) {
-	std::cout << "Animal Cat is constructed" << std::endl;
+	std::cout << "Cat is constructed" << std::endl;
 }
 
 Cat::Cat(std::string type) : Animal(type), _brain(new Brain()) {
