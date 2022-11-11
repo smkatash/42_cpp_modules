@@ -6,70 +6,72 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 15:00:09 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 19:52:07 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 20:02:40 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Converter.hpp"
+#include "Converter.hpp"
 
+// long int strtol (const char* str, char** endptr, int base);
+// float strtof (const char* str, char** endptr);
 Converter::Converter(const std::string& stringType) : _stringType(stringType) {
-    if (stringType.empty())
+	if (stringType.empty())
 		throw Converter::InvalidInput();
-    if (stringType.length() == 1) {
-        if (isdigit(stringType[0])) {
-            this->_intType = static_cast<int>(strtol(stringType.c_str(), NULL, 10));
-            this->_type = intType;
-        } else {
-            this->_charType = stringType[0];
-            this->_type = charType;
-        }
-    } else {
-        char    *longptr;
-        char    *dblptr;
-        long    longstr = strtol(stringType.c_str(), &longptr, 10);
-        double  doublestr = strtof(stringType.c_str(), &dblptr);
-        if (*longptr) {
-            if (*dblptr) {
-                if (*dblptr == 'f') {
-                    this->_floatType = static_cast<float>(doublestr);
-                    this->_type = floatType;
-                } else {
-                    throw Converter::InvalidInput();
-                }
-            } else {
-                this->_doubleType = doublestr;
-                this->_type = doubleType;
-            }
-        } else {
-            if (longstr >std::numeric_limits<int>::max() || longstr < std::numeric_limits<int>::min())
-                throw Converter::InvalidInput();
-            else {
-                this->_intType = static_cast<int>(longstr);
-                this->_type = intType;
-            }
-        }
-    }
+	if (stringType.length() == 1) {
+		if (isdigit(stringType[0])) {
+			this->_intType = static_cast<int>(strtol(stringType.c_str(), NULL, 10));
+			this->_type = intType;
+		} else {
+			this->_charType = stringType[0];
+			this->_type = charType;
+		}
+	} else {
+		char    *longptr;
+		char    *dblptr;
+		long    longstr = strtol(stringType.c_str(), &longptr, 10);
+		double  doublestr = strtof(stringType.c_str(), &dblptr);
+		if (*longptr) {
+			if (*dblptr) {
+				if (*dblptr == 'f') {
+					this->_floatType = static_cast<float>(doublestr);
+					this->_type = floatType;
+				} else {
+					throw Converter::InvalidInput();
+				}
+			} else {
+				this->_doubleType = doublestr;
+				this->_type = doubleType;
+			}
+		} else {
+			if (longstr > std::numeric_limits<int>::max() || longstr < std::numeric_limits<int>::min())
+				throw Converter::InvalidInput();
+			else {
+				this->_intType = static_cast<int>(longstr);
+				this->_type = intType;
+			}
+		}
+	}
 	std::cout << this->_stringType << " is constructed" << std::endl;
 }
 
 Converter::~Converter() {
-    std::cout << this->_stringType << " is destroyed" << std::endl;
+	std::cout << this->_stringType << " is destroyed" << std::endl;
 }
 
 /**
  * @brief char type conversion
  */
 char    Converter::CharConvert() const {
-    switch (this->_type)
-    {
-    case charType:
-        return this->_charType;
-    case intType:
-        if (!isprint(static_cast<char>(this->_intType)))
-            throw Converter::NonDisplayable();
-        else
-            return static_cast<char>(this->_intType);
-    case floatType:
+	switch (this->_type)
+	{
+	case charType:
+		return this->_charType;
+	case intType:
+		if (!isprint(static_cast<char>(this->_intType)))
+			throw Converter::NonDisplayable();
+		else
+			return static_cast<char>(this->_intType);
+	case floatType:
 		if (isnan(this->_floatType) || isinf(this->_floatType)
 			|| this->_floatType > std::numeric_limits<char>::max() || this->_floatType < std::numeric_limits<char>::min())
 			throw Converter::Impossible();
@@ -87,14 +89,14 @@ char    Converter::CharConvert() const {
 			return static_cast<char>(this->_doubleType);
 	default:
 		break;
-    }
+	}
 }
 
 /**
  * @brief integer type conversion
  */
 int Converter::IntConvert() const {
-    switch (this->_type)
+	switch (this->_type)
 	{
 	case charType:
 		return static_cast<int>(this->_charType);
@@ -155,7 +157,7 @@ double Converter::DoubleConvert() const{
 	}
 }
 
-std::ostream& operator<<(std::ostream& o, const Converter& Parent)
+std::ostream &operator<<(std::ostream &o, const Converter &Parent)
 {
 	o << "char: ";
 	try

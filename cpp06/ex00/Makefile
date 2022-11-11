@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/10/01 17:08:00 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/11 19:11:55 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,18 +15,19 @@ VPATH	=	src
 CC		=	c++
 CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 
-NAME	=	convert
+NAME	=	Convert
 SRC		=	main.cpp Converter.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "convert is complied"
+	@echo "Convert is complied"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj
