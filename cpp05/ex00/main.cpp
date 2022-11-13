@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:29:16 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/29 09:57:14 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/12 21:38:37 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Bureaucrat.hpp"
+#include "Bureaucrat.hpp"
 
 int main(void)
 {
@@ -65,7 +65,6 @@ int main(void)
 	}
     std::cout << bob << std::endl;
 	std::cout << std::endl;
-	std::cout << "Increment grade by 150:" << std::endl;
 	bob.setGrade(150);
 	try
 	{
@@ -75,6 +74,16 @@ int main(void)
 	{
 		std::cerr << exceptionGrade.message() << std::endl;
 	}
+	std::cout << bob << std::endl;
+	try
+	{
+		bob.decrementGrade();
+	}
+	catch (Bureaucrat::Exception &exceptionGrade)
+	{
+		std::cerr << exceptionGrade.message() << std::endl;
+	}
+	std::cout << bob << std::endl;
 	std::cout << std::endl;
-	return (0);
+	return 0;
 }

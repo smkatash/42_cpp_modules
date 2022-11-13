@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 07:17:11 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/29 09:52:17 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:11:04 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,26 @@
 # define BUREAUCRAT_HPP
 # include <iostream>
 # include "Form.hpp"
+
 class Form;
 
 class Bureaucrat {
-    private:
-        const std::string _name;
-        int               _grade;
-    public:
-        Bureaucrat();
-        Bureaucrat(std::string name, int grade);
-        Bureaucrat(const Bureaucrat& Parent);
-        ~Bureaucrat();
-        Bureaucrat& operator=(const Bureaucrat& cpyParent);
-        const std::string getName( void ) const;
-        int     getGrade( void ) const;
-        void    setGrade(const int grade);
-        void    incrementGrade( void );
-		void	decrementGrade( void );
-        class Exception : public std::exception{
+	private:
+		const std::string _name;
+		int               _grade;
+	public:
+		Bureaucrat(void);
+		Bureaucrat(std::string name, int grade);
+		Bureaucrat(const Bureaucrat &Parent);
+		~Bureaucrat(void);
+		Bureaucrat& operator=(const Bureaucrat &cpyParent);
+		const std::string getName(void) const;
+		int     getGrade(void) const;
+		void    setGrade(const int grade);
+		void    incrementGrade(void);
+		void	decrementGrade(void);
+		void	signForm(Form &paper);
+		class Exception : public std::exception{
 			public:
 				virtual const std::string message() const throw();
 		};
@@ -43,9 +45,8 @@ class Bureaucrat {
 			public:
 				virtual const std::string message() const throw();
 		};
-        void signForm(Form& paper);
 };
 
-std::ostream& operator<<(std::ostream& o, Bureaucrat const & crnt);
+std::ostream& operator<<(std::ostream &o, Bureaucrat const &crnt);
 
 #endif

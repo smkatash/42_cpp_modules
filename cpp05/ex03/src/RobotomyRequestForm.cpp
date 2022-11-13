@@ -3,39 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:49:09 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 15:22:00 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/12 22:06:31 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/RobotomyRequestForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() : Form("Default Robotomy", 72, 45) {
-    this->_target = "Default";
-    std::cout << "Robotomy Request " << *this << " is constructed" << std::endl;
+	this->_target = "Default";
+	std::cout << "Robotomy Request " << *this << " is constructed" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm() {
-    std::cout << "Robotomy Request " << *this << " is destroyed" << std::endl;
+	std::cout << "Robotomy Request " << *this << " is destroyed" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target)
-    : Form("Robotomy Request", 72, 45) {
-    this->_target = target;
-    std::cout << "Robotomy Request " << *this << " is constructed" << std::endl;
+	: Form("Robotomy Request", 72, 45) {
+	this->_target = target;
+	std::cout << "Robotomy Request " << *this << " is constructed" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& Parent)
-    : Form(Parent.getName(), Parent.getGradeToSign(), Parent.getGradeToExecute()) {
-        this->_target = Parent.getTarget();
-    std::cout << "Robotomy Request has copied " << Parent.getName() << std::endl;
+	: Form(Parent.getName(), Parent.getGradeToSign(), Parent.getGradeToExecute()) {
+		this->_target = Parent.getTarget();
+	std::cout << "Robotomy Request has copied " << Parent.getName() << std::endl;
 }
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(RobotomyRequestForm const& cpyParent) {
-    this->_target = cpyParent.getTarget();
-    return *this;
+	this->_target = cpyParent.getTarget();
+	return *this;
 }
 
 std::string	RobotomyRequestForm::getTarget( void ) const {
@@ -49,8 +49,8 @@ const std::string RobotomyRequestForm::RobotomyException::message() const throw(
 void RobotomyRequestForm::execute(Bureaucrat const& executor) const {
 	if (this->getSigned() == false)
 		throw (Form::UnsignedFormException());
-	else if (executor.getGrade() < this->getGradeToExecute())
-		throw (Form::GradeTooLowException());	
+	else if (executor.getGrade() > this->getGradeToExecute())
+		throw (Form::GradeTooHighException());
 	int success = std::rand() % 2;
 	std::cout << "< intensive drilling noises >\n";
 	if (success == 1)

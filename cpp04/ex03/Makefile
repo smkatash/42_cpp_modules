@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
+#    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/11/09 21:13:13 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/11 13:47:35 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
 	@echo "Interfaces is compiled"
 
-obj/%.o : %.cpp  obj
+obj/%.o : %.cpp | obj
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :

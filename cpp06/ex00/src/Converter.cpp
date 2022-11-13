@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Converter.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 15:00:09 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/11 20:02:40 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 00:06:34 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ Converter::Converter(const std::string& stringType) : _stringType(stringType) {
 					throw Converter::InvalidInput();
 				}
 			} else {
+				if (longstr > std::numeric_limits<double>::max())
+					throw Converter::InvalidInput();
 				this->_doubleType = doublestr;
 				this->_type = doubleType;
 			}

@@ -3,60 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 09:22:13 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/29 10:29:38 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/12 21:54:45 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Form.hpp"
+#include "Form.hpp"
 
 Form::Form() : _name("default Form"), _signed(0), _gradeToSign(50), _gradeToExecute(50) {
-    std::cout << "default Form is constructed" << std::endl;
+	std::cout << "default Form is constructed" << std::endl;
 }
 
 Form::Form(std::string name, int gradeToSign, int gradeToExecute) :
-    _name(name), _signed(0), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute){
-    if (gradeToSign > 150 || gradeToExecute > 150)
+	_name(name), _signed(0), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute){
+	if (gradeToSign < 1 || gradeToExecute < 1)
 		throw (Form::GradeTooHighException());
-	else if (gradeToSign < 1 || gradeToExecute < 1)
+	else if (gradeToSign > 150 || gradeToExecute > 150)
 		throw (Form::GradeTooLowException());
 	else
 	{
-        std::cout << "Form " << name << " is constructed:";
-        std::cout << " grade to sign - " << gradeToSign << ", grade to execute - " << gradeToExecute << std::endl;
+		std::cout << "Form " << name << " is constructed:";
+		std::cout << " grade to sign - " << gradeToSign << ", grade to execute - " << gradeToExecute << std::endl;
 	}
 }
 
-Form::Form(const Form& Parent) :
-    _name(Parent._name), _signed(Parent._signed), _gradeToSign(Parent._gradeToSign), _gradeToExecute(Parent._gradeToExecute) {
-    std::cout << "A copy of " << Parent._name << " is created" << std::endl;
+Form::Form(const Form &Parent) :
+	_name(Parent._name), _signed(Parent._signed), _gradeToSign(Parent._gradeToSign), _gradeToExecute(Parent._gradeToExecute) {
+	std::cout << "A copy of " << Parent._name << " is created" << std::endl;
 }
 
-Form::~Form() {
-    std::cout << *this << " is destroyed" << std::endl;
-}
+Form::~Form() {}
 
 Form& Form::operator=(const Form& cpyParent) {
-    this->_signed = cpyParent.getSigned();
+	this->_signed = cpyParent.getSigned();
 	return (*this);
 }
 
 const std::string Form::getName() const {
-    return (this->_name);
+	return (this->_name);
 }
 
-int Form::getGradeToSign( void ) const {
-    return (this->_gradeToSign);
+int Form::getGradeToSign(void) const {
+	return (this->_gradeToSign);
 }
 
-int Form::getGradeToExecute( void ) const {
-    return (this->_gradeToExecute);
+int Form::getGradeToExecute(void) const {
+	return (this->_gradeToExecute);
 }
 
-bool Form::getSigned( void ) const {
-    return (this->_signed);
+bool Form::getSigned(void) const {
+	return (this->_signed);
 }
 
 void	Form::setSigned(const bool state)
@@ -85,11 +83,11 @@ const std::string Form::GradeTooHighException::message() const throw()
 	return ("FormException: grade is too high!");
 };
 
-void	Form::beSigned(Bureaucrat & param)
+void	Form::beSigned(Bureaucrat &param)
 {
 	int	grade = param.getGrade();
 
-	if (grade < _gradeToSign)
+	if (grade > _gradeToSign)
 	{
 		throw (Form::GradeTooLowException());
 		return ;

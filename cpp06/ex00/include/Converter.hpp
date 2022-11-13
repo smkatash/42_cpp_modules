@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   Converter.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 14:54:35 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/11 19:37:44 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 00:25:43 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONVERTER_HPP
 # define CONVERTER_HPP
-# include <iostream>
+# include <iomakstream>
 # include <limits.h>
 # include <stdlib.h>
 # include <math.h> 

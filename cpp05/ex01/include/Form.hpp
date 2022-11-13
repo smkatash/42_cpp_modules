@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 09:05:19 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/29 10:04:56 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:11:54 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,16 @@ class Form {
 		const int			_gradeToExecute;
 
     public:
-        Form();
+        Form(void);
 		Form(std::string name, int gradeToSign, int gradeToExecute);
-		Form(const Form& Parent);
-		~Form();
+		Form(const Form &Parent);
+		~Form(void);
 		Form& operator=(const Form& cpyParent);
-        const std::string	getName( void ) const;
-		int					getGradeToSign( void ) const;
-		int					getGradeToExecute( void ) const;
-		bool				getSigned( void ) const;
-		void				setSigned( const bool new_value);
+        const std::string	getName(void) const;
+		int					getGradeToSign(void) const;
+		int					getGradeToExecute(void) const;
+		bool				getSigned(void) const;
+		void				setSigned(const bool new_value);
     
         class Exception : public std::exception{ 
             public:

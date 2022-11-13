@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:04:01 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 14:45:45 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:44:04 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ class RobotomyRequestForm : public Form {
 	private:
 		std::string	_target;
 	public:
-		RobotomyRequestForm();
+		RobotomyRequestForm(void);
 		RobotomyRequestForm(std::string target);
-		~RobotomyRequestForm();
-		RobotomyRequestForm(RobotomyRequestForm const& Parent);
-		RobotomyRequestForm& operator=(RobotomyRequestForm const& cpyParent);
-		std::string	getTarget( void ) const;
+		~RobotomyRequestForm(void);
+		RobotomyRequestForm(RobotomyRequestForm const &Parent);
+		RobotomyRequestForm &operator=(RobotomyRequestForm const &cpyParent);
+		std::string	getTarget(void) const;
 		void execute(Bureaucrat const& executor) const;
 		class RobotomyException : public Form::Exception
 		{

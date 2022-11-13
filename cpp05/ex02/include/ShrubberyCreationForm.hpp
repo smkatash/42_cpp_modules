@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:03:04 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 15:07:57 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:25:30 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ class ShrubberyCreationForm : public Form{
 	private:
 		std::string	_target;
 	public:
-		ShrubberyCreationForm();
+		ShrubberyCreationForm(void);
 		ShrubberyCreationForm(std::string target);
-		~ShrubberyCreationForm();
+		~ShrubberyCreationForm(void);
 		ShrubberyCreationForm(ShrubberyCreationForm const& Parent);
-		ShrubberyCreationForm& operator=(ShrubberyCreationForm const& cpyParent);
-		std::string	getTarget( void ) const;
-		void execute(Bureaucrat const & executor) const;
+		ShrubberyCreationForm &operator=(ShrubberyCreationForm const &cpyParent);
+		std::string	getTarget(void) const;
+		void execute(Bureaucrat const &executor) const;
 };
 
 #endif

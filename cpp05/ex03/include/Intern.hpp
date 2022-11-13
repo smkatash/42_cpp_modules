@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 15:51:02 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 16:14:22 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:57:23 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 class Form;
 
 class Intern {
-    public:
-        Intern();
-        ~Intern();
+	public:
+		Intern();
+		~Intern();
 	class InvalidFormException : public std::exception {
-	    public:
-		    const char* what() const throw() {
+		public:
+			const char* what() const throw() {
 			return ("InternException: Form type not found.");
 		}
 	};

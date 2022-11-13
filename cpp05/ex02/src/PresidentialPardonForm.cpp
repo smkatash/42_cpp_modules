@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 14:00:56 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 14:03:44 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/12 22:06:42 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/PresidentialPardonForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 PresidentialPardonForm::PresidentialPardonForm() : Form("Default President Pardon", 25, 5)
 {
@@ -50,8 +50,8 @@ void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
 	if (this->getSigned() == false)
 		throw (Form::UnsignedFormException());
-	else if (executor.getGrade() < this->getGradeToExecute())
-		throw (Form::GradeTooLowException());
+	else if (executor.getGrade() > this->getGradeToExecute())
+		throw (Form::GradeTooHighException());
 	else
 		std::cout << this->_target << " was pardonned by Zafod Beeblebrox\n";
 }

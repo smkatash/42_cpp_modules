@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
+#    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/29 10:48:26 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/11 14:05:22 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	BureaucratwithForm
 SRC		=	main.cpp Bureaucrat.cpp Form.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
@@ -25,8 +26,8 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
 	@echo "BureaucratwithForm is complied"
 
-obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+obj/%.o : %.cpp | obj
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

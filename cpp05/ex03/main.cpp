@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:29:16 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 16:14:05 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:58:22 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Bureaucrat.hpp"
-#include "include/Form.hpp"
-#include "include/ShrubberyCreationForm.hpp"
-#include "include/RobotomyRequestForm.hpp"
-#include "include/PresidentialPardonForm.hpp"
-#include "include/Intern.hpp"
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 #include <iostream>
 
-int main()
+int main(void)
 {
 	srand(time(NULL));
 
@@ -42,7 +42,6 @@ int main()
 	{
 		std::cerr << error.what() << std::endl;
 	}
-	
 	std::cout << std::endl;
 	lars.executeForm(*shrubbery);
 	hans.executeForm(*shrubbery);
@@ -83,4 +82,5 @@ int main()
 	lars.executeForm(*robotomy);
 	hans.executeForm(*robotomy);
 	ellen.executeForm(*robotomy);
+	return 0;
 }

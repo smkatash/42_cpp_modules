@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:29:16 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 15:33:01 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/12 22:16:08 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Bureaucrat.hpp"
-#include "include/Form.hpp"
-#include "include/ShrubberyCreationForm.hpp"
-#include "include/RobotomyRequestForm.hpp"
-#include "include/PresidentialPardonForm.hpp"
+#include "Bureaucrat.hpp"
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include <iostream>
 
-int main()
+int main(void)
 {
 	srand(time(NULL));
 
@@ -30,9 +30,9 @@ int main()
 	std::cout << hans << std::endl;
 	std::cout << ellen << std::endl;
 	std::cout << std::endl;
-	ShrubberyCreationForm shrubbery("home");
-	RobotomyRequestForm robotomy("Bender");
-	PresidentialPardonForm pardon("Stephen Bannon");
+	ShrubberyCreationForm	shrubbery("home");
+	RobotomyRequestForm		robotomy("Bender");
+	PresidentialPardonForm	pardon("Stephen Bannon");
 	std::cout << std::endl;
 	lars.executeForm(shrubbery);
 	hans.executeForm(shrubbery);
@@ -72,5 +72,7 @@ int main()
 	std::cout << std::endl;
 	lars.executeForm(robotomy);
 	hans.executeForm(robotomy);
+	robotomy.setSigned(false);
 	ellen.executeForm(robotomy);
+	return 0;
 }

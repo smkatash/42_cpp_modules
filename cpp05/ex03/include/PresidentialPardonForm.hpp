@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 13:04:53 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/30 14:00:45 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/11 14:44:24 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ class PresidentialPardonForm : public Form {
 	private:
 		std::string	_target;
 	public:
-		PresidentialPardonForm();
+		PresidentialPardonForm(void);
 		PresidentialPardonForm(std::string target);
-		~PresidentialPardonForm();
-		PresidentialPardonForm(PresidentialPardonForm const & Parent);
-		PresidentialPardonForm & operator=(PresidentialPardonForm const & cpyParent);
-		std::string	getTarget( void ) const;
-		void execute(Bureaucrat const & executor) const;
+		~PresidentialPardonForm(void);
+		PresidentialPardonForm(PresidentialPardonForm const &Parent);
+		PresidentialPardonForm &operator=(PresidentialPardonForm const &cpyParent);
+		std::string	getTarget(void) const;
+		void execute(Bureaucrat const &executor) const;
 };
 
 #endif
