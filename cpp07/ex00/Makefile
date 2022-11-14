@@ -6,27 +6,28 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/10/01 23:42:06 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/14 01:50:00 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 VPATH	=	src
 
 CC		=	c++
-CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
+CFLAGS	=	-std=c++98 -Wall -Wextra -Werror
 
-NAME	=	template
+NAME	=	Template
 SRC		=	main.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "template is complied"
+	@echo "Template is compiled"
 
-obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+obj/%.o : %.cpp | obj
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

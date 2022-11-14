@@ -6,17 +6,17 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:40:24 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 23:50:17 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/14 01:50:27 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/whatever.hpp"
+#include "whatever.hpp"
 #include <iostream>
 
 int main(void)
 {
-	int a = 2;
-	int b = 3;
+	int a = 1;
+	int b = 9;
 	std::cout << "a = " << a << ", b = " << b << std::endl;
 	::swap( a, b );
 	std::cout << "After swap" << std::endl;
@@ -54,8 +54,8 @@ int main(void)
 
 	std::cout << "----------------------------" << std::endl;
 
-    double doubleA = 3421.56;
-	double doubleB = -242.0;
+    double doubleA = 1234.56;
+	double doubleB = -123.01;
 
 	std::cout << "doubleA: " << doubleA << std::endl;
 	std::cout << "doubleB: " << doubleB << std::endl;
@@ -71,4 +71,5 @@ int main(void)
 	std::cout << "Implicit:" << std::endl;
 	std::cout << "min(doubleA, doubleB): " << ::min(doubleA, doubleB) << std::endl;
 	std::cout << "max(doubleA, doubleB): " << ::max(doubleA, doubleB) << std::endl;
+	return 0;
 }

@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:54:54 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/02 00:12:19 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/14 02:00:51 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/iter.hpp"
+#include "iter.hpp"
 #include <iostream>
 #include <string>
 
@@ -18,14 +18,14 @@ void printToLower(const std::string& str)
 {
 	for (std::string::const_iterator itr = str.cbegin(); itr != str.cend(); itr++)
 		std::cout << (char)tolower(*itr);
-    std::cout << " ";
+	std::cout << " ";
 }
 
 void printToUpper(const std::string& str)
 {
 	for (std::string::const_iterator itr = str.cbegin(); itr != str.cend(); itr++)
 		std::cout << (char)toupper(*itr);
-    std::cout << " ";
+	std::cout << " ";
 }
 
 void intIncrement(const int& num)
@@ -33,7 +33,7 @@ void intIncrement(const int& num)
 	std::cout << (num + 5) << " ";
 }
 
-int main()
+int main(void)
 {
 	std::string arr[] = {"Hello", "World", "42school", "here"};
 
@@ -48,12 +48,12 @@ int main()
 
 	std::cout << "\nIntegers: " << std::endl;
 	::iter(intarr, 3, putString<int>);
-    std::cout << "\nIncrement by 5: " << std::endl;
+	std::cout << "\nIncrement by 5: " << std::endl;
 	::iter(intarr, 3, intIncrement);
-    
+
 	float floats[] = {4.22, 4.22, 7.22};
-    
+
 	std::cout << "\nFloats: " << std::endl;
 	::iter(floats, 3, putString<float>);
-    
+	return (0);
 }
