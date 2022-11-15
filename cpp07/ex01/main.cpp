@@ -6,7 +6,7 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:54:54 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/14 02:00:51 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/15 11:24:44 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,5 @@ int main(void)
 
 	std::cout << "\nFloats: " << std::endl;
 	::iter(floats, 3, putString<float>);
-	return (0);
+	return 0;
 }
