@@ -6,7 +6,7 @@
 #    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/10/03 13:39:08 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/15 15:30:32 by kanykei          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	easyFind
 SRC		=	main.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
@@ -25,8 +26,8 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
 	@echo "easyFind is complied"
 
-obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+obj/%.o : %.cpp | obj
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

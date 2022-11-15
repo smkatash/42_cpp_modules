@@ -6,11 +6,11 @@
 /*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:23:39 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/03 18:57:26 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/15 15:51:57 by kanykei          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Span.hpp"
+#include "Span.hpp"
 
 Span::Span(const unsigned int& N) : _size(N) {
 }
@@ -54,10 +54,10 @@ unsigned int Span::shortestSpan() const
 {
 	std::vector<int> temp;
 
-	int (*iabs)(int) = &std::abs;
 	if (this->_Vect.size() <= 1)
 		throw SpanEmptyException();
 	std::adjacent_difference(this->_Vect.begin(), this->_Vect.end(), std::back_inserter(temp));
+	int (*iabs)(int) = &std::abs;
 	std::transform(temp.begin(), temp.end(), temp.begin(), iabs);
 	return *std::min_element(temp.begin(), temp.end());
 }
@@ -66,10 +66,10 @@ unsigned int Span::longestSpan() const
 {
 	std::vector<int> temp;
 	
-	int (*iabs)(int) = &std::abs;
 	if (this->_Vect.size() <= 1)
 		throw SpanEmptyException();
 	std::adjacent_difference(this->_Vect.begin(), this->_Vect.end(), std::back_inserter(temp));
+	int (*iabs)(int) = &std::abs;
 	std::transform(temp.begin(), temp.end(), temp.begin(), iabs);
 	return *std::max_element(temp.begin(), temp.end());
 }
