@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:15:21 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 21:17:14 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 17:37:40 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 class A : public Base
 {
-    public:
-        A(){}
-        ~A(){}
+	public:
+		A(){}
+		~A(){}
 };
 
 #endif

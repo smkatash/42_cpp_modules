@@ -6,7 +6,7 @@
 /*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 15:00:09 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/13 00:06:34 by ktashbae         ###   ########.fr       */
+/*   Updated: 2022/11/13 16:25:55 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ Converter::Converter(const std::string& stringType) : _stringType(stringType) {
 			this->_type = charType;
 		}
 	} else {
-		char    *longptr;
-		char    *dblptr;
-		long    longstr = strtol(stringType.c_str(), &longptr, 10);
-		double  doublestr = strtof(stringType.c_str(), &dblptr);
+		char	*longptr;
+		char	*dblptr;
+		long	longstr = strtol(stringType.c_str(), &longptr, 10);
+		double	doublestr = strtof(stringType.c_str(), &dblptr);
 		if (*longptr) {
 			if (*dblptr) {
 				if (*dblptr == 'f') {

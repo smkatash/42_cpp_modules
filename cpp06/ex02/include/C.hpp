@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   C.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:17:45 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 21:17:57 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 17:38:00 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 class C : public Base
 {
-    public:
-        C(){}
-        ~C(){}
+	public:
+		C(){}
+		~C(){}
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:12:38 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 21:20:38 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 17:37:29 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define BASE_HPP
 
 class Base {
-    public:
-        virtual ~Base(){}
+	public:
+		virtual ~Base(){}
 };
 
 #endif

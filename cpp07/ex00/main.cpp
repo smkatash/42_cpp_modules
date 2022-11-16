@@ -3,34 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:40:24 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/14 01:50:27 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/16 11:20:52 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-#include <iostream>
 
 int main(void)
 {
 	int a = 1;
 	int b = 9;
 	std::cout << "a = " << a << ", b = " << b << std::endl;
-	::swap( a, b );
+	::swap(a, b);
 	std::cout << "After swap" << std::endl;
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
+	std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
 	std::string c = "hello";
 	std::string d = "world";
 	std::cout << "c = " << c << ", d = " << d << std::endl;
 	::swap(c, d);
-    std::cout << "After swap" << std::endl;
+	std::cout << "After swap" << std::endl;
 	std::cout << "c = " << c << ", d = " << d << std::endl;
-	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+	std::cout << "min(c, d) = " << ::min(c, d) << std::endl;
+	std::cout << "max(c, d) = " << ::max(c, d) << std::endl;
 
 	std::cout << "----------------------------" << std::endl;
 
@@ -39,7 +38,7 @@ int main(void)
 
 	std::cout << "floatA: " << floatA << std::endl;
 	std::cout << "floatB: " << floatB << std::endl;
-	std::cout << "swap<float>(floatA, floatB)" << std::endl;
+	std::cout << "To swap<float>(floatA, floatB)" << std::endl;
 	::swap<float>(floatA, floatB);
 	std::cout << "floatA: " << floatA << std::endl;
 	std::cout << "floatB: " << floatB << std::endl;
@@ -54,12 +53,12 @@ int main(void)
 
 	std::cout << "----------------------------" << std::endl;
 
-    double doubleA = 1234.56;
+	double doubleA = 1234.56;
 	double doubleB = -123.01;
 
 	std::cout << "doubleA: " << doubleA << std::endl;
 	std::cout << "doubleB: " << doubleB << std::endl;
-	std::cout << "swap<int>(doubleA, doubleB)" << std::endl;
+	std::cout << "To swap<double>(doubleA, doubleB)" << std::endl;
 	::swap<double>(doubleA, doubleB);
 	std::cout << "doubleA: " << doubleA << std::endl;
 	std::cout << "doubleB: " << doubleB << std::endl;

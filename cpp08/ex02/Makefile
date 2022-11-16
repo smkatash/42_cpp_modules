@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
+#    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/10/03 19:38:32 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/16 14:45:46 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,6 +18,7 @@ CFLAGS	=	-std=c++98 -Wall -Wextra -Werror -MD
 NAME	=	MutantStack
 SRC		=	main.cpp
 OBJ		=	$(addprefix obj/,$(notdir $(SRC:.cpp=.o)))
+INC		=	-I include
 
 all : $(NAME)
 
@@ -26,7 +27,7 @@ $(NAME) : $(OBJ)
 	@echo "MutantStack is compiled"
 
 obj/%.o : %.cpp  obj
-	@$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :
 	@mkdir obj

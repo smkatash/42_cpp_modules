@@ -6,7 +6,7 @@
 #    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/11/13 00:36:12 by ktashbae         ###   ########.fr        #
+#    Updated: 2022/11/13 16:39:12 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ all : $(NAME)
 
 $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
-	@echo "convert is complied"
+	@echo "serialization is complied"
 
 obj/%.o : %.cpp | obj
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@

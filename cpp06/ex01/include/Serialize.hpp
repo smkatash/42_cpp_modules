@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Serialize.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 14:54:35 by kanykei           #+#    #+#             */
-/*   Updated: 2022/10/01 21:04:47 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/13 17:27:39 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ typedef struct
 	double		level;
 } Data;
 
-Data*       deserialize(uintptr_t raw);
-uintptr_t   serialize(Data* ptr);
+uintptr_t		serialize(Data* ptr);
+Data*			deserialize(uintptr_t raw);
+void*			serialize_void(Data* ptr);
+Data*			deserialize_void(void *raw);
 
 #endif

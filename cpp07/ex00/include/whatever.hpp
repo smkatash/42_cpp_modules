@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 23:38:09 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/15 14:55:08 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/16 11:12:20 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
+# include <iostream>
 
 template <typename Type>
 void swap(Type& a, Type& b)
