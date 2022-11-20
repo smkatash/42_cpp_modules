@@ -1,7 +1,7 @@
 ## CPP Modules
 
 Modules have a practical orientation, with example exercises in all sections.
-Followings topics are included:
+Followings topics are covered:
 - I/O manipulations
 - Classes introduction
 - Class methods and members keywords in C++
