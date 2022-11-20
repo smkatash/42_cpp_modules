@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
+#    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/09/15 22:50:25 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/01 18:16:28 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,6 @@ re : clean all
 .PHONY : all clean fclean re
 
 # Run tests ===========================
-check: $(NAME)
-	./$(NAME)
+log: $(NAME) 
+	./$(NAME) > lost_file.log
 # Run tests ===========================

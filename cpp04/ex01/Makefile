@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+         #
+#    By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 13:37:45 by kanykei           #+#    #+#              #
-#    Updated: 2022/11/09 20:38:33 by kanykei          ###   ########.fr        #
+#    Updated: 2022/11/09 21:34:28 by ktashbae         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME) : $(OBJ)
 	@$(CC) $(CFLAGS) -o $@ $^ 
 	@echo "Brain is compiled"
 
-obj/%.o : %.cpp  obj
+obj/%.o : %.cpp | obj
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 
 obj :

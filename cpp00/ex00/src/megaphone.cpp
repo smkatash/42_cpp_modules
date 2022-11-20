@@ -3,30 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 09:47:15 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 11:51:50 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/01 18:01:19 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-
-// Loops over string and returns it's length
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	for (i = 0; str && str[i]; i++);
-	return (i);
-}
 
 // Loops over string and if lower case char, bitwise changes to uppercase char
 std::string	megaphone(std::string str)
 {
 	for (int i = 0; str[i]; i++)
 		if ((str[i] >= 97 && str[i] <= 122))
-			str[i] = char(str[i] & '_');
+			str[i] = char(str[i] & 95);
 	return str;
 }
 

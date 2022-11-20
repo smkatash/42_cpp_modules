@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 16:25:46 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 18:19:09 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/01 18:03:41 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ Contact::~Contact() {}
 namespace {
 	bool checkIsalnum(const std::string &str){
 		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++){
-			if (std::isalnum(*ptr))
-			return true;
+			if (std::isalnum(*ptr) == false)
+				return false;
 		}
-		return false;
+		return true;
 	}
 }
 // namespaces are used to organize code into logical groups and to prevent name 
@@ -32,10 +32,10 @@ namespace {
 namespace {
 	bool checkIsdigit(const std::string &str){
 		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++){
-			if (std::isdigit(*ptr))
-			return true;
+			if (std::isdigit(*ptr) == false)
+				return false;
 		}
-		return false;
+		return true;
 	}
 }
 

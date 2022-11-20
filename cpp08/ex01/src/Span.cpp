@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:23:39 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/15 15:51:57 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/17 16:55:43 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,12 @@ void Span::addNumber(const std::vector<int>::iterator& begin, const std::vector<
 		this->_Vect.insert(this->_Vect.end(), begin, end);
 }
 
+/**
+ * @cite Default implementation - the difference b/w two adjacent items
+ * back_inserter container that supports a push_back operation
+ * _OutputIterator transform(_InputIterator __first, _InputIterator __last, 
+ * _OutputIterator __result, _UnaryOperation __op)
+ */
 unsigned int Span::shortestSpan() const
 {
 	std::vector<int> temp;

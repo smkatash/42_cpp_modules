@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:09:28 by kanykei           #+#    #+#             */
-/*   Updated: 2022/09/15 18:18:48 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/01 18:04:29 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,10 @@ void PhoneBook::addContact(){
 namespace {
 	bool checkIsalpha(const std::string &str) {
 		for (std::string::const_iterator ptr = str.begin(); ptr != str.end(); ptr++) {
-			if (std::isalpha(*ptr)) 
-				return true;
+			if (std::isalpha(*ptr) == false) 
+				return false;
 		}
-		return false;
+		return true;
 	}
 }
 

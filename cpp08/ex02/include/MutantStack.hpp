@@ -6,14 +6,16 @@
 /*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 19:02:25 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/16 14:58:47 by ktashbae         ###   ########.fr       */
+/*   Updated: 2022/11/17 16:30:00 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MUTANTSTACK_HPP
 # define MUTANTSTACK_HPP
 # include <stack>
+# include <iostream>
 
+//template <class T, class Container = deque<T> > class stack;
 template <typename T, typename T_Container = std::deque<T> >
 class MutantStack : public std::stack<T, T_Container>
 {
@@ -27,12 +29,22 @@ class MutantStack : public std::stack<T, T_Container>
 			return *this;
 		}
 		virtual ~MutantStack(void) {};
-		typedef typename T_Container::iterator				iterator;
-		typedef typename T_Container::reverse_iterator		reverse_iterator;
-		iterator			begin() { return this->c.begin(); };
-		iterator			end() { return this->c.end(); };
-		reverse_iterator	rbegin() { return this->c.rbegin(); };
-		reverse_iterator	rend() { return this->c.rend(); };
+
+		typedef typename T_Container::iterator			iterator;
+		iterator	begin() {
+			return this->c.begin();
+		};
+		iterator		end() {
+			return this->c.end();
+		};
+
+		typedef typename T_Container::reverse_iterator	reverse_iterator;
+		reverse_iterator	rbegin() {
+			return this->c.rbegin();
+		};
+		reverse_iterator	rend() {
+			return this->c.rend(); 
+		};
 };
 
 #endif

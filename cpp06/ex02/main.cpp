@@ -6,14 +6,14 @@
 /*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:19:28 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/13 18:14:11 by ktashbae         ###   ########.fr       */
+/*   Updated: 2022/11/13 18:16:04 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/Base.hpp"
-#include "include/A.hpp"
-#include "include/B.hpp"
-#include "include/C.hpp"
+#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 #include <iostream>
 
 Base* generate() {

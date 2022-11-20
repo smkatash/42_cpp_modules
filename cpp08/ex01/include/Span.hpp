@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:05:57 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/15 15:52:39 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/17 17:11:24 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class Span {
 	private:
-		unsigned int		_size;
+		unsigned long		_size;
 		std::vector<int>	_Vect;
 
 	public:
@@ -44,6 +44,7 @@ class Span {
 					return ("Span is empty");
 				}
 		};
+
 };
 
 #endif

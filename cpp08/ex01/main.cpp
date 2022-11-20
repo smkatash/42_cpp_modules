@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kanykei <kanykei@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ktashbae <ktashbae@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:31:20 by kanykei           #+#    #+#             */
-/*   Updated: 2022/11/15 16:02:25 by kanykei          ###   ########.fr       */
+/*   Updated: 2022/11/17 17:12:40 by ktashbae         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,13 @@ int	main(void)
 
 	std::cout << "Adding vector:" << std::endl;
 	for (int i = 0; i <= 5; i++)
-			Vector.push_back(i * 20);
+		Vector.push_back(i * 20);
+	for(unsigned long i = 0; i < Vector.size(); i++) {
+		std::cout << Vector.at(i) << ' '; 
+	}
+	std::cout << std::endl;
 
-	//Original Span(1000)
+	//Original Span(10000) / 20 / 10
 	Span sp = Span(0);
 	try
 	{
@@ -29,6 +33,10 @@ int	main(void)
 		sp.addNumber(1000);
 		sp.addNumber(9);
 		sp.addNumber(10);
+		sp.addNumber(11000);
+		sp.addNumber(1100);
+		sp.addNumber(1120);
+		sp.addNumber(1130);
 		sp.addNumber(11);
 		sp.addNumber(std::begin(Vector), std::end(Vector));
 	}
@@ -52,5 +60,6 @@ int	main(void)
 	{
 		std::cerr << e.what() << std::endl;
 	}
+	std::cout << std::endl;
 	return 0;
 }
