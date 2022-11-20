@@ -1,9 +1,13 @@
 ## CPP Modules
-Introduction to C++
 
+Modules have a practical orientation, with example exercises in all sections.
+Followings topics are included:
 - I/O manipulations
 - Classes introduction
 - Class methods and members keywords in C++
+- Inheritance, Overloading and Polymorphism
+- STL, Containers and Iterators
+- Abstract types, Templates and Exceptions.
 
 ### Modules:
 
