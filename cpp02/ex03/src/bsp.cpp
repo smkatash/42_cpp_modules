@@ -25,6 +25,9 @@ bool bsp(Point const x, Point const y, Point const z, Point const point)
 	num1 = sign(point, x, y);
 	num2 = sign(point, y, z);
 	num3 = sign(point, z, x);
+	
+	if (num1 == 0 && num2 == 0 && num3 == 0)
+		return (false);
 
 	isNegative = num1 < 0 || num2 < 0 || num3 < 0;
 	isPositive = num1 > 0 || num2 > 0 || num3 > 0;
