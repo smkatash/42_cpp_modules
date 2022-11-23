@@ -49,7 +49,7 @@ class Array {
 
 		Array(const Array& cpy): _size(cpy.size()) {
 			if (this->_size > 0)
-			this->_array = new Type[this->_size];
+				this->_array = new Type[this->_size];
 			for (size_t i = 0; i < this->_size; i++)
 				this->_array[i] = cpy._array[i];
 			std::cout << "Copy constructor is called" << std::endl;
