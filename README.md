@@ -26,7 +26,7 @@ Followings topics are covered:
 
 ## License Information
 
-This projects uses the (Do What The Fuck You Want To Public License) [WTFPL license](http://www.wtfpl.net/) 
+This projects uses the [WTFPL license](http://www.wtfpl.net/) (Do What The Fuck You Want To Public License)
 
 <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
