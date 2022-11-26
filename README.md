@@ -22,6 +22,14 @@ Followings topics are covered:
 | | [ex06](https://github.com/smkatash/42_CPP_modules/tree/master/cpp01/ex06) | | | | | | | |
 
 
+
+
+#License Information
+
+This projects uses the [WTFPL license] (http://www.wtfpl.net/) (Do What The Fuck You Want To Public License)
+
 <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
        width="80" height="15" alt="WTFPL" /></a>
+
+
