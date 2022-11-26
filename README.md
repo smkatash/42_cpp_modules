@@ -20,3 +20,8 @@ Followings topics are covered:
 | | [ex04](https://github.com/smkatash/42_CPP_modules/tree/master/cpp01/ex04) | | | | | | | |
 | | [ex05](https://github.com/smkatash/42_CPP_modules/tree/master/cpp01/ex05) | | | | | | | |
 | | [ex06](https://github.com/smkatash/42_CPP_modules/tree/master/cpp01/ex06) | | | | | | | |
+
+
+<a href="http://www.wtfpl.net/"><img
+       src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+       width="80" height="15" alt="WTFPL" /></a>
